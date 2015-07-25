@@ -53,8 +53,9 @@ body {
 }
 
 .footer{
-    position: fixed;
-    bottom: 0;
-    top: 86%;
-    width: 65%;
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
 }
