@@ -2,41 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Random programming quotes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Programming quotes</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>Random programming quotes</h1>
+<h1>Programming quotes</h1>
 
-<div class="container" id="main-cont">
-    <div class="row"></div>
-    <div class="row">A collection of programming quotes. Click <span class="highlite">"Get a quote"</span> button to see a new one and <span class="highlite">"Tweet"</span> to tweet the current quote.</div>
+<div class="site-wrapper">
+    <div class="container" id="main-cont">
+        <div class="row"></div>
+        <div class="row">A collection of programming quotes. <br> Click <span class="highlite">"Get a quote"</span>
+            button
+            to see
+            a new one and <span class="highlite">"Tweet"</span> to tweet the current quote.
+        </div>
 
-    <div class="container" id="quote">You defeated me But you won't defeat me again Because you have grown all you can
-        grow.... but I am still growing (about Mount Everest) - Sir Edmund Hillary
+        <div class="container" id="quote"></div>
+        <input type="button" class="btn btn-success" value="Get a quote" id="buttonQuote">
+
+        <div id="twtbox"></div>
+        <div class="footer">
+            <div class="inner">
+                <p>View the source code on <a target="_blank"
+                                              href="https://github.com/Clarity-89/Quote_generator">GitHub</a>.</p>
+            </div>
+        </div>
     </div>
-    <input type="button" class="btn btn-success" value="Get a quote" id="buttonQuote">
-    <div id="twtbox"></div>
-    <script>
-        window.twttr = (function (d, s, id) {
-            var t, js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            return window.twttr || (t = {
-                        _e: [], ready: function (f) {
-                            t._e.push(f)
-                        }
-                    });
-        }(document, "script", "twitter-wjs"));
-    </script>
-
 </div>
+
 <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="generator.js"></script>

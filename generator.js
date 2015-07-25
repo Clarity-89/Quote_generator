@@ -1,6 +1,5 @@
 $(document).ready(function () {
-// Global variable to store an index of a random quote
-    var i;
+
     var quotes = [{
         quote: 'First, solve the problem. Then, write the code.',
         author: 'J. Johnson'
@@ -43,6 +42,7 @@ $(document).ready(function () {
     }, {quote: "It's all talk until the code runs.", author: 'W. Cunningham'}];
 
     $('#buttonQuote').click(function () {
+        // Remove tweet button if already exist on the page
         var t = $('#twitterbutton');
         if (t != null) {
             t.remove();
@@ -50,17 +50,19 @@ $(document).ready(function () {
         displayQuote();
     });
 
-    // A function that shows a random quote from the list of quotes
+    // A function that shows a random quote from the list of quotes and generate new tweet button
     function displayQuote() {
-        i = getRandomInt(0, quotes.length - 1);
+        var i = getRandomInt(0, quotes.length - 1);
         $('#quote').html(quotes[i].quote + '<br />' + '<br />' + '<span id="ital">' + ' -' + quotes[i].author + '</span>');
+
+        // Generate new tweet button for every new quote
         this.link = $('<a></a>')
             .attr({
                 'href': 'https://twitter.com/share',
                 'class': 'twitter-share-button',
                 'style': 'margin: 50px;',
                 'id': 'twitterbutton',
-                'data-url': 'https://dev.twitter.com/web/tweet-button',
+                'data-url': 'http://tinyurl.com/pr4gl3y',
                 "data-text": $('#quote').text(),
                 'data-count': 'none',
                 "data-size": "large",
@@ -73,11 +75,7 @@ $(document).ready(function () {
         twttr.widgets.load(); //very important
     }
 
-    var newarr = quotes.filter(function (el) {
-        return el.quote.length + el.author.length < 140;
-    });
-    console.log(newarr.length)
-// A function to generate random numbers in a specified range
+    // A function to generate random numbers in a specified range
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
