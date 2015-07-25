@@ -72,7 +72,7 @@ $(document).ready(function () {
         // Put it inside the twtbox div
         var tweetdiv = $('#twtbox');
         tweetdiv.append(this.link);
-        twttr.widgets.load(); //very important
+        twttr.widgets.load();
     }
 
     // A function to generate random numbers in a specified range

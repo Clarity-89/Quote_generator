@@ -31,11 +31,11 @@ body {
     font-style: italic;
 }
 
-#buttonQuote{
+#buttonQuote {
     margin-bottom: 1%;
 }
 
-.highlite{
+.highlite {
     color: darkblue;
 }
 
@@ -52,9 +52,9 @@ body {
 
 }
 
-.footer{
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    width:100%;
+.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
 }
