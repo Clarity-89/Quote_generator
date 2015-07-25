@@ -1,0 +1,40 @@
+#quote {
+    margin: 3%;
+    background-color: rgba(232, 232, 232, 0.6);
+    border: 10px solid #d3d0ca;
+    border-radius: 15px;
+    text-align: center;
+    padding: 5%;
+    font-size: 20px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    color: #110c0c;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+    background: url("http://www.myfreetextures.com/wp-content/uploads/2011/06/old-paper-floral-parchment-background-texture.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 16px;
+
+}
+
+#ital {
+    font-style: italic;
+}
+
+#buttonQuote{
+    margin-bottom: 1%;
+}
+
+.highlite{
+    color: darkblue;
+}
