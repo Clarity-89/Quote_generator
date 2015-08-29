@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     $('#buttonQuote').click(function () {
         // Remove tweet button if already exist on the page
-        var t = $('#twitterbutton');
+        var t = $('.twitter-share-button');
         if (t != null) {
             t.remove();
         }
@@ -52,8 +52,9 @@ $(document).ready(function () {
 
     // A function that shows a random quote from the list of quotes and generate new tweet button
     function displayQuote() {
-        var i = getRandomInt(0, quotes.length - 1);
-        $('#quote').html(quotes[i].quote + '<br />' + '<br />' + '<span id="ital">' + ' -' + quotes[i].author + '</span>');
+        var i = getRandomInt(0, quotes.length - 1),
+            quote = $('#quote');
+        quote.html(quotes[i].quote + '<br />' + '<br />' + '<span id="ital">' + ' -' + quotes[i].author + '</span>');
 
         // Generate new tweet button for every new quote
         this.link = $('<a></a>')
@@ -61,9 +62,8 @@ $(document).ready(function () {
                 'href': 'https://twitter.com/share',
                 'class': 'twitter-share-button',
                 'style': 'margin: 50px;',
-                'id': 'twitterbutton',
                 'data-url': 'http://tinyurl.com/pr4gl3y',
-                "data-text": $('#quote').text(),
+                "data-text": quote.text(),
                 'data-count': 'none',
                 "data-size": "large",
                 'data-title': 'Hi'
